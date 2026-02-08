@@ -19,7 +19,7 @@ const Login = ({ onLoginSuccess }) => {
       if (error.response && error.response.status === 403) {
         window.alert('You cannot login on another device.');
       } else {
-        window.alert('Invalid username/password');
+        window.alert('Invalid Username/Password');
       }
     } finally {
       setLoading(false);
