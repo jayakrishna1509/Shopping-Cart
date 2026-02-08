@@ -200,7 +200,7 @@ The application enforces single-device login:
 - Axios
 - Lucide React (icons)
 
-## Development
+## ✔️ Development
 
 To run both backend and frontend in development mode:
 
