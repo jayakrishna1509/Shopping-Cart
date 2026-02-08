@@ -1,8 +1,8 @@
-# Shopping Cart Application
+# 🛒 Shopping Cart Application
 
 A full-stack e-commerce shopping cart application built with Node.js/Express/MongoDB backend and React frontend.
 
-## Features
+## ✨ Features
 
 - User authentication with JWT tokens
 - Single-device login enforcement (one active session per user)
@@ -11,7 +11,7 @@ A full-stack e-commerce shopping cart application built with Node.js/Express/Mon
 - Order placement and history
 - Fully responsive design with Tailwind CSS
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 shopping-cart-app/
@@ -28,15 +28,15 @@ shopping-cart-app/
 └── README.md
 ```
 
-## Prerequisites
+## 🎯 Prerequisites
 
 - Node.js (v14 or higher)
 - MongoDB (running locally or MongoDB Atlas)
 - npm or yarn
 
-## Setup Instructions
+## 👉 Setup Instructions
 
-### Backend Setup
+### 🌐 Backend Setup
 
 1. Navigate to the backend directory:
 ```bash
@@ -69,9 +69,9 @@ npm start
 npm run dev
 ```
 
-# Backend API Documentation
+# ♦️ Backend API Documentation
 
-## Setup
+## ✔️ Setup
 
 1. Install dependencies: `npm install`
 2. Create `.env` file with:
@@ -107,7 +107,7 @@ npm run dev
   - `price` (Number)
 - `totalAmount` (Number)
 
-## Authentication
+## 📝 Authentication
 
 All protected routes require a JWT token in the Authorization header:
 ```
@@ -118,7 +118,7 @@ The token is validated against the token stored in the user's database record to
 
 The backend server will run on `http://localhost:5000`
 
-## Login Credentials
+## 🔒 Login Credentials
 ```
 {
     "username": "testuser",
@@ -126,7 +126,7 @@ The backend server will run on `http://localhost:5000`
 }
 ```
 
-### Frontend Setup
+### 🔷 Frontend Setup
 
 1. Navigate to the frontend directory:
 ```bash
@@ -145,7 +145,7 @@ npm run dev
 
 The frontend will run on `http://localhost:3000`
 
-## API Endpoints
+## ☑️ API Endpoints
 
 ### User Endpoints
 - `POST /api/users` - Create a new user
@@ -165,7 +165,7 @@ The frontend will run on `http://localhost:3000`
 - `POST /api/orders` - Create order from cart (requires authentication)
 - `GET /api/orders` - Get user's orders (requires authentication)
 
-## Usage
+## 📍Usage
 
 1. **Create a User**: Use the signup endpoint or create a user directly in the database
 2. **Login**: Use the login screen to authenticate
@@ -175,14 +175,14 @@ The frontend will run on `http://localhost:3000`
 6. **Checkout**: Click "Checkout" to convert your cart into an order
 7. **View Orders**: Click "Order History" to see all your past orders
 
-## Single-Device Login
+## 📱 Single-Device Login
 
 The application enforces single-device login:
 - When a user logs in, a token is stored in the database
 - If a user tries to log in from another device while already logged in, they will receive an error message
 - The token is cleared when the user logs out, allowing them to log in again
 
-## Technologies Used
+## 👨‍💻 Technologies Used
 
 ### Backend
 - Node.js
@@ -216,7 +216,7 @@ cd frontend
 npm run dev
 ```
 
-## Notes
+## ✅ Notes
 
 - Make sure MongoDB is running before starting the backend
 - The frontend proxy is configured to forward `/api` requests to `http://localhost:5000`
