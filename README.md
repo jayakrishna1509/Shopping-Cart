@@ -81,7 +81,7 @@ npm run dev
 3. Start MongoDB
 4. Run server: `npm start` or `npm run dev`
 
-## Models
+## 💠 Models
 
 ### User
 - `username` (String, unique, required)
