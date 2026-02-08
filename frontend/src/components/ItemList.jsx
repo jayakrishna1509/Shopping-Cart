@@ -14,10 +14,23 @@ const ItemList = () => {
   const fetchItems = async () => {
     try {
       const response = await getItems();
-      setItems(response.data);
+      console.log('Items response:', response);
+      if (response && response.data) {
+        console.log('Items data:', response.data);
+        setItems(Array.isArray(response.data) ? response.data : []);
+      } else {
+        setItems([]);
+      }
     } catch (error) {
       console.error('Error fetching items:', error);
-      window.alert('Error loading items: ' + (error.response?.data?.error || error.message));
+      setItems([]);
+      if (error.response) {
+        window.alert('Error loading items: ' + (error.response?.data?.error || error.message));
+      } else if (error.request) {
+        window.alert('Unable to connect to server. Please check if the backend is running.');
+      } else {
+        window.alert('Error loading items: ' + error.message);
+      }
     } finally {
       setLoading(false);
     }
